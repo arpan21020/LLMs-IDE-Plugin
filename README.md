@@ -45,7 +45,7 @@ The LLMs IDE Plugin requires certain configurations to connect to various LLM AP
 <ol>
 <li>Enter the API key into the provided input field.</li>
 <li>Click Save API Key to store the API key securely within the VSCode global state.</li>
-<ol>
+</ol>
 The API key for each model can be updated at any time by selecting the model and entering a new API key.
 
 
@@ -81,12 +81,12 @@ The project includes a jsconfig.json file, which configures JavaScript file hand
 
 <h1>Usage of Plugin</h1> 
 <h2>Launching the Plugin:</h2>
-<li>Open Visual Studio Code (VSCode) and navigate to the Command Palette by pressing Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
-<li>Type and select the command “LLMs IDE Plugin: Open” to launch the extension interface.
+<li>Open Visual Studio Code (VSCode) and navigate to the Command Palette by pressing Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).</li>
+<li>Type and select the command “LLMs IDE Plugin: Open” to launch the extension interface.</li>
 
 <h2>Selecting a Language Model:</h2>
-<li>In the extension interface, a dropdown menu allows users to select from available LLMs, including Gemini, Llama 3, and GPT-3 Turbo.
-<li>Choose a model to be used for text generation.
+<li>In the extension interface, a dropdown menu allows users to select from available LLMs, including Gemini, Llama 3, and GPT-3 Turbo.</li>
+<li>Choose a model to be used for text generation.</li>
 <h2>Configuring the API Key:</h2>
 Enter your API key for the selected model in the API Key input field. Click on the “Save API Key” button to store the key securely.
 <h2>Entering the Prompt:</h2>
