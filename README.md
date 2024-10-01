@@ -1,5 +1,4 @@
-NATWEST Hackathon
-		
+
 
 The "IDE Plugin for Large Language Model (LLM) Integration" project is aimed at enhancing the coding and development experience within integrated development environments (IDEs) by allowing seamless integration of LLM functionalities. With the exponential growth of artificial intelligence, LLMs like GPT-4 have shown tremendous potential in aiding developers by generating code snippets, providing explanations, auto-completing code, and more. This plugin was designed to leverage these powerful AI-driven tools directly from the IDE, making it more accessible and user-friendly for developers working across various programming languages.
 
