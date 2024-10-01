@@ -80,23 +80,23 @@ The project utilizes ESLint to enforce coding standards and improve code quality
 The project includes a jsconfig.json file, which configures JavaScript file handling in VSCode. It specifies Node16 as the module system and ES2022 as the target ECMAScript version, enabling modern features and type-checking. The checkJs option is enabled for error detection, while node_modules are excluded from type-checking.
 
 <h1>Usage of Plugin</h1> 
-Launching the Plugin:
-Open Visual Studio Code (VSCode) and navigate to the Command Palette by pressing Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
-Type and select the command “LLMs IDE Plugin: Open” to launch the extension interface.
+<h2>Launching the Plugin:</h2>
+<li>Open Visual Studio Code (VSCode) and navigate to the Command Palette by pressing Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
+<li>Type and select the command “LLMs IDE Plugin: Open” to launch the extension interface.
 
-Selecting a Language Model:.
-In the extension interface, a dropdown menu allows users to select from available LLMs, including Gemini, Llama 3, and GPT-3 Turbo.
-Choose a model to be used for text generation.
-Configuring the API Key:
+<h2>Selecting a Language Model:</h2>
+<li>In the extension interface, a dropdown menu allows users to select from available LLMs, including Gemini, Llama 3, and GPT-3 Turbo.
+<li>Choose a model to be used for text generation.
+<h2>Configuring the API Key:</h2>
 Enter your API key for the selected model in the API Key input field. Click on the “Save API Key” button to store the key securely.
-Entering the Prompt:
+<h2>Entering the Prompt:</h2>
  Type your desired prompt in the Prompt input field. This prompt serves as the input for the selected language model.
-Generating Text:
-Click the “Generate Text” button to initiate the text generation process. A loading indicator will appear during the operation.
-The generated text will be displayed in the Generated Text area upon completion.
-Error Handling:
+<h2>Generating Text:</h2>
+<li>Click the “Generate Text” button to initiate the text generation process. A loading indicator will appear during the operation.
+<li>The generated text will be displayed in the Generated Text area upon completion.
+<h2>Error Handling:</h2>
 If the API key is missing or if there are any errors during text generation, an error message will be shown to inform the user.
-Usage Recommendations:
+<h2>Usage Recommendations:</h2>
 Ensure that the API keys used are valid and that any model-specific limitations are acknowledged for optimal performance.
 
 
