@@ -1,10 +1,13 @@
 const vscode = require('vscode');
 
 const { textGenTextOnlyPromptStreaming } = require('./llm_models/gemini');
-
+const { getGroqChatCompletion } = require('./llm_models/llama3');
+const { callAzureOpenAI } = require('./llm_models/gpt3turbo') 
 
 const conversationalLLMs = [
 	{ name: 'gemini-1.5-flash', func : textGenTextOnlyPromptStreaming},
+	{ name: 'llama3-8b-8192', func : getGroqChatCompletion},
+	{ name: 'gpt-35-turbo-0613', func : callAzureOpenAI}
 	
 ];
 
@@ -41,13 +44,14 @@ function activate(context) {
 		panel.webview.html = getWebviewContent(panel.webview, context.extensionUri,savedApiKey);
 
 		panel.webview.onDidReceiveMessage(async message => {
+			const modelName = selectLLM(message.modelName);
+
             if (message.command === 'saveApiKey') {
 
-                context.globalState.update('geminiApiKey', message.apiKey);
+                context.globalState.update(modelName.name, message.apiKey);
                 vscode.window.showInformationMessage('API Key saved.');
             } else if (message.command === 'generateText') {
                 const apiKey = message.apiKey || savedApiKey;
-                const modelName = selectLLM(message.modelName);
                 const prompt = message.prompt;
 
                 if (!apiKey) {
