@@ -54,7 +54,7 @@ The API key for each model can be updated at any time by selecting the model and
 <li>The plugin supports multiple LLMs, including:
     <ul>
     <li>gemini-1.5-flash</li>
-    <li>llama3-8b-8192<li>
+    <li>llama3-8b-8192</li>
     <li>gpt-35-turbo-0613</li>
     </ul>
 </li>
