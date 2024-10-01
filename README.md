@@ -52,9 +52,11 @@ The API key for each model can be updated at any time by selecting the model and
 <h2>2. Model Selection:</h2>
 <ul>
 <li>The plugin supports multiple LLMs, including:
+    <ul>
     <li>gemini-1.5-flash</li>
     <li>llama3-8b-8192<li>
     <li>gpt-35-turbo-0613</li>
+    </ul>
 </li>
 <li>Users can select a model from the dropdown menu in the UI. The corresponding API key for the selected model will be retrieved from the global state or prompted if not saved.</li>
 <li>The user can then enter a prompt, and the plugin will send the prompt to the selected model for text generation.</li>
