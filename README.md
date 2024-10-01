@@ -81,8 +81,8 @@ The project includes a jsconfig.json file, which configures JavaScript file hand
 
 <h1>Usage of Plugin</h1> 
 <h2>Launching the Plugin:</h2>
-<li>Open Visual Studio Code (VSCode) and navigate to the Command Palette by pressing Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).
-<li>Type and select the command “LLMs IDE Plugin: Open” to launch the extension interface.
+<li>Open Visual Studio Code (VSCode) and navigate to the Command Palette by pressing Ctrl+Shift+P (Windows/Linux) or Cmd+Shift+P (Mac).</li>
+<li>Type and select the command “LLMs IDE Plugin: Open” to launch the extension interface.</li>
 
 <h2>Selecting a Language Model:</h2>
 <li>In the extension interface, a dropdown menu allows users to select from available LLMs, including Gemini, Llama 3, and GPT-3 Turbo.
