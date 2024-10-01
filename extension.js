@@ -108,7 +108,7 @@ function getWebviewContent(webview, extensionUri,apiKey) {
     </head>
     <body>
         <h1>Generative AI LLMs</h1>
-
+		<div class="heading">
 		<label for="model">Select Model:</label>
 		<select id="model" required>
 			<option value="" disabled selected>Select a model</option>

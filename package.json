@@ -17,7 +17,7 @@
     "commands": [
       {
         "command": "llms-ide-plugin.helloWorld",
-        "title": "Hello World"
+        "title": "Help from LLms"
       }
     ]
   },
