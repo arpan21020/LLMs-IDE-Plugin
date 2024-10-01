@@ -108,6 +108,7 @@ function getWebviewContent(webview, extensionUri,apiKey) {
     </head>
     <body>
         <h1>Generative AI LLMs</h1>
+
 		<label for="model">Select Model:</label>
 		<select id="model" required>
 			<option value="" disabled selected>Select a model</option>
@@ -133,7 +134,8 @@ function getWebviewContent(webview, extensionUri,apiKey) {
 
 		 <!-- Output Area for Generated Text -->
 		<label for="output">Generated Text:</label>
-		<textarea id="output" rows="10" cols="80" readonly></textarea>
+		<!-- index.html -->
+		<div id="output"></div>
 
 		<script  src="${scriptUri}"></script>
     </body>

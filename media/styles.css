@@ -40,6 +40,8 @@ button:hover {
 #output {
     margin-top: 15px;
     resize: vertical;
+    background-color: #ffffff;
+    color: #000;
 }
 
 /* Loading Indicator Styles */

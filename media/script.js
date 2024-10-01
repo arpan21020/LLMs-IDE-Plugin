@@ -22,7 +22,7 @@
     function displayGeneratedText(text) {
         const outputArea = document.getElementById('output');
         if (outputArea) {
-            outputArea.value = text;
+            outputArea.innerHTML = text;
         }
     }
 
