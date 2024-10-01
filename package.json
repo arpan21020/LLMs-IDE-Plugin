@@ -9,13 +9,17 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onCommand:llms-ide-plugin.helloWorld"
+  ],
   "main": "./extension.js",
   "contributes": {
-    "commands": [{
-      "command": "llms-ide-plugin.helloWorld",
-      "title": "Hello World"
-    }]
+    "commands": [
+      {
+        "command": "llms-ide-plugin.helloWorld",
+        "title": "Hello World"
+      }
+    ]
   },
   "scripts": {
     "lint": "eslint .",
@@ -23,11 +27,15 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.93.0",
     "@types/mocha": "^10.0.8",
     "@types/node": "20.x",
-    "eslint": "^9.11.1",
+    "@types/vscode": "^1.93.0",
     "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.11.1"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.20.0",
+    "groq-sdk": "^0.7.0"
   }
 }
