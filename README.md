@@ -99,10 +99,10 @@ If the API key is missing or if there are any errors during text generation, an 
 <h2>Usage Recommendations:</h2>
 Ensure that the API keys used are valid and that any model-specific limitations are acknowledged for optimal performance.
 
+<h1>contrinutors : Arpan Kumar  arpan21020@iiitd.ac.in
+                 Rajat Jaiswal rajat21184@iiitd.ac.in
 
-
-
-
+</h1>
 
 
 
