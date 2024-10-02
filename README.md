@@ -13,10 +13,13 @@ Visual Studio Code (VSCode): Make sure you have VSCode installed on your system.
 Node.js and npm: The plugin is built using Node.js, so you need Node.js and npm (Node package manager) installed. You can download them from Node.js.
 
 <h3>2. Clone the Repository:</h3>
-Clone the plugin repository to your local machine using Git:
-
+Clone the plugin repository to your local machine using Git: 
+    <li> ->git clone <a href="https://github.com/arpan21020/LLMs-IDE-Plugin.git">https://github.com/arpan21020/LLMs-IDE-Plugin.git</li>
+    <li> ->cd <repository-directory></li>
+        
 <h3>3. Install Dependencies:</h3>
 After cloning the repository, navigate to the plugin's directory and run the following command to install the required npm packages:
+<li>-> npm install</li>
 
 
 
@@ -34,9 +37,14 @@ Press F5 to launch a new VSCode window with the plugin loaded in the "Extension 
 
 <h3>6. Install the Plugin Locally:</h3>
 To install the plugin locally:
-Open the command palette in VSCode (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on macOS).
-Type Extensions: Install from VSIX... and select the option.
-Browse to the directory where your extension is located and select the .vsix file (you may need to package the plugin using vsce package if it is not pre-packaged).
+<ol>
+    <li>Install vsce using command “npm install -g vsce”</li>
+    <li>Navigate to Your Extension's Directory</li>
+    <li>Package the Extension using command “vsce package”</li>
+    <li>Open the command palette in VSCode (Ctrl+Shift+P on Windows/Linux or Cmd+Shift+P on macOS).</li>
+    <li>Type Extensions: Install from VSIX... and select the option.</li>
+    <li>Browse to the directory where your extension is located and select the .vsix file </li>
+</ol>
 <h2>Configuration</h2> 
 The LLMs IDE Plugin requires certain configurations to connect to various LLM APIs and customize how the models are used within the VSCode environment.
 <h3>1. API Key Setup:</h3>
@@ -99,9 +107,11 @@ If the API key is missing or if there are any errors during text generation, an 
 <h2>Usage Recommendations:</h2>
 Ensure that the API keys used are valid and that any model-specific limitations are acknowledged for optimal performance.
 
-<h1>contributors : </h1>
-                  <h2> Arpan Kumar  arpan21020@iiitd.ac.in <br>
-                   Rajat Jaiswal rajat21184@iiitd.ac.in </h2>
+<h1>Contributors : </h1>
+                 <ol>
+                     <li><h3>Arpan Kumar</h3></li>
+                     <li><h3>Rajat Jaiswal</h3></li>
+                 </ol>
 
 
 
