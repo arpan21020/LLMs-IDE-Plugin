@@ -100,7 +100,7 @@ If the API key is missing or if there are any errors during text generation, an 
 Ensure that the API keys used are valid and that any model-specific limitations are acknowledged for optimal performance.
 
 <h1>contributors : </h1>
-    :             <h2> </h2>Arpan Kumar  arpan21020@iiitd.ac.in <br>
+                  <h2> Arpan Kumar  arpan21020@iiitd.ac.in <br>
                    Rajat Jaiswal rajat21184@iiitd.ac.in </h2>
 
 
