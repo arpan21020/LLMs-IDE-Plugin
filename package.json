@@ -14,6 +14,25 @@
   ],
   "main": "./extension.js",
   "contributes": {
+    "viewsContainers": {
+        "activitybar": [
+            {
+                "id": "llms-ide-plugin",
+                "title": "LLM Selector",
+                "icon": "media/icon.svg"
+            }
+        ]
+    },
+    "views": {
+        "llms-ide-plugin": [
+            {
+                "type": "webview",
+                "id": "llms-ide-plugin.webview",
+                "name": "LLM Model Selector"
+            }
+        ]
+    },
+
     "commands": [
       {
         "command": "llms-ide-plugin.helloWorld",
