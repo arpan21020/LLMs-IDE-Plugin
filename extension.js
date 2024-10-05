@@ -24,20 +24,20 @@ class LLMWebviewProvider {
 			localResourceRoots: [vscode.Uri.joinPath(this.context.extensionUri, 'media')]
 		};
 
-		const savedApiKey = this.context.globalState.get('geminiApiKey', '');
-
 		// Set the webview's HTML content
-		webviewView.webview.html = this.getWebviewContent(webviewView.webview, this.context.extensionUri, savedApiKey);
+		webviewView.webview.html = this.getWebviewContent(webviewView.webview, this.context.extensionUri);
 
 		// Handle messages from the webview
 		webviewView.webview.onDidReceiveMessage(async (message) => {
-			const modelName = this.selectLLM(message.modelName);
-
-			if (message.command === 'saveApiKey') {
-				this.context.globalState.update(modelName.name, message.apiKey);
-				vscode.window.showInformationMessage('API Key saved.');
+			if (message.command === 'getApiKey') {
+				const apiKey = this.context.globalState.get(message.modelName, '');
+				// Send the API key back to the webview
+				webviewView.webview.postMessage({ command: 'loadApiKey', apiKey });
+			} else if (message.command === 'saveApiKey') {
+				this.context.globalState.update(message.modelName, message.apiKey);
+				vscode.window.showInformationMessage(`API Key for ${message.modelName} saved.`);
 			} else if (message.command === 'generateText') {
-				const apiKey = message.apiKey || savedApiKey;
+				const apiKey = message.apiKey || this.context.globalState.get(message.modelName, '');
 				const prompt = message.prompt;
 
 				if (!apiKey) {
@@ -49,8 +49,8 @@ class LLMWebviewProvider {
 				webviewView.webview.postMessage({ command: 'showLoading' });
 
 				try {
-					const responseText = await modelName.func(apiKey, prompt);
-					console.log("RESPONSE TEXT........", responseText);
+					const selectedModel = conversationalLLMs.find(model => model.name === message.modelName);
+					const responseText = await selectedModel.func(apiKey, prompt);
 					webviewView.webview.postMessage({ command: 'displayGeneratedText', text: responseText });
 				} catch (error) {
 					vscode.window.showErrorMessage('Error generating text: ' + error.message);
@@ -59,17 +59,8 @@ class LLMWebviewProvider {
 		});
 	}
 
-	// Select the LLM model based on user's choice
-	selectLLM(selection) {
-		const llm = conversationalLLMs.find(model => model.name === selection);
-		if (!llm) {
-			console.error('Model not found:', selection);
-		}
-		return llm;
-	}
-
 	// Get the HTML content for the webview
-	getWebviewContent(webview, extensionUri, apiKey) {
+	getWebviewContent(webview, extensionUri) {
 		const cssUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'media', 'styles.css'));
 		const scriptUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'media', 'script.js'));
 
